@@ -4,10 +4,10 @@ import { supabaseFetch } from "../lib/supabaseClient";
 // Tours de la Knowledge Base (misma estructura que en listTours.ts)
 const TOURS_KB = [
   { id: 1, nombre: "Sevilla City Intro Tour", horarios: "10:30 am (Julio-Agosto: 10:00 am)", dias: "Lunes a Sábado (excepto feriados)", maxPersonas: 12, precio: 25 },
-  { id: 2, nombre: "Cathedral Tour (sin tickets)", horarios: "12:45 o 13:15", dias: "Lunes, Miércoles y Viernes (excepto festivos)", maxPersonas: 12, precio: 30 },
-  { id: 3, nombre: "Cathedral Tour (tickets incluidos)", horarios: "12:45 o 13:15", dias: "Lunes, Miércoles y Viernes (excepto festivos)", maxPersonas: 12, precio: 45 },
-  { id: 4, nombre: "Alcázar Tour (sin tickets)", horarios: "13:15 (verano: 12:45; primavera/otoño también 15:15)", dias: "Mar/Jue/Sáb + opciones estacionales Lun/Mie/Vie", maxPersonas: 12, precio: 30 },
-  { id: 5, nombre: "Alcázar Tour (tickets incluidos)", horarios: "13:15 (verano: 12:45; primavera/otoño también 15:15)", dias: "Mar/Jue/Sáb + opciones estacionales Lun/Mie/Vie", maxPersonas: 12, precio: 45 },
+  { id: 2, nombre: "Cathedral Tour (sin tickets)", horarios: "13:15 (Lunes/Miércoles/Viernes); 15:15 (Martes/Jueves/Sábados)", dias: "Lunes a Sábado (excepto festivos)", maxPersonas: 12, precio: 30 },
+  { id: 3, nombre: "Cathedral Tour (tickets incluidos)", horarios: "13:15 (Lunes/Miércoles/Viernes); 15:15 (Martes/Jueves/Sábados)", dias: "Lunes a Sábado (excepto festivos)", maxPersonas: 12, precio: 45 },
+  { id: 4, nombre: "Alcázar Tour (sin tickets)", horarios: "13:15 (Martes/Jueves/Sábados); 15:15 (Lunes/Miércoles/Viernes)", dias: "Lunes a Sábado (según temporada)", maxPersonas: 12, precio: 30 },
+  { id: 5, nombre: "Alcázar Tour (tickets incluidos)", horarios: "13:15 (Martes/Jueves/Sábados); 15:15 (Lunes/Miércoles/Viernes)", dias: "Lunes a Sábado (según temporada)", maxPersonas: 12, precio: 45 },
   { id: 6, nombre: "Cathedral, Alcázar and Santa Cruz Quarter", horarios: "Consultar", dias: "Consultar", maxPersonas: 12, precio: 55 },
   { id: 7, nombre: "City Intro Tour + 1 Monument", horarios: "Consultar", dias: "Consultar", maxPersonas: 12, precio: 40 },
   { id: 8, nombre: "City Intro, Cathedral and Alcázar", horarios: "Consultar", dias: "Consultar", maxPersonas: 12, precio: 50 },

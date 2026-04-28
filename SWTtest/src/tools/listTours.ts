@@ -30,8 +30,8 @@ const TOURS_KNOWLEDGE_BASE: Tour[] = [
     duracion: "2-3 horas",
     tipo: "monumentos",
     grupo: true,
-    horarios: "12:45 o 13:15",
-    dias: "Lunes, Miércoles y Viernes (excepto festivos)",
+    horarios: "13:15 (Lunes/Miércoles/Viernes); 15:15 (Martes/Jueves/Sábados)",
+    dias: "Lunes a Sábado (excepto festivos)",
   },
   {
     id: 3,
@@ -40,8 +40,8 @@ const TOURS_KNOWLEDGE_BASE: Tour[] = [
     duracion: "2-3 horas",
     tipo: "monumentos",
     grupo: true,
-    horarios: "12:45 o 13:15",
-    dias: "Lunes, Miércoles y Viernes (excepto festivos)",
+    horarios: "13:15 (Lunes/Miércoles/Viernes); 15:15 (Martes/Jueves/Sábados)",
+    dias: "Lunes a Sábado (excepto festivos)",
   },
   {
     id: 4,
@@ -50,8 +50,8 @@ const TOURS_KNOWLEDGE_BASE: Tour[] = [
     duracion: "2-3 horas",
     tipo: "monumentos",
     grupo: true,
-    horarios: "13:15 (verano: 12:45; primavera/otoño también 15:15)",
-    dias: "Mar/Jue/Sáb + opciones estacionales Lun/Mie/Vie",
+    horarios: "13:15 (Martes/Jueves/Sábados); 15:15 (Lunes/Miércoles/Viernes)",
+    dias: "Lunes a Sábado (según temporada)",
   },
   {
     id: 5,
@@ -60,8 +60,8 @@ const TOURS_KNOWLEDGE_BASE: Tour[] = [
     duracion: "2-3 horas",
     tipo: "monumentos",
     grupo: true,
-    horarios: "13:15 (verano: 12:45; primavera/otoño también 15:15)",
-    dias: "Mar/Jue/Sáb + opciones estacionales Lun/Mie/Vie",
+    horarios: "13:15 (Martes/Jueves/Sábados); 15:15 (Lunes/Miércoles/Viernes)",
+    dias: "Lunes a Sábado (según temporada)",
   },
   {
     id: 6,

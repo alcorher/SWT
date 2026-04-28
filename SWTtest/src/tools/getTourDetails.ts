@@ -4,10 +4,10 @@ import { supabaseFetch } from "../lib/supabaseClient";
 // Tours de la Knowledge Base (misma estructura que en listTours.ts)
 const TOURS_KB = [
   { id: 1, nombre: "Sevilla City Intro Tour", horarios: "10:30 am (Julio-Agosto: 10:00 am)", dias: "Lunes a Sábado (excepto feriados)", maxPersonas: 12, precio: 25 },
-  { id: 2, nombre: "Cathedral Tour (sin tickets)", horarios: "Consultar", dias: "Varios días", maxPersonas: 12, precio: 30 },
-  { id: 3, nombre: "Cathedral Tour (tickets incluidos)", horarios: "Consultar", dias: "Varios días", maxPersonas: 12, precio: 45 },
-  { id: 4, nombre: "Alcázar Tour (sin tickets)", horarios: "Consultar", dias: "Varios días", maxPersonas: 12, precio: 30 },
-  { id: 5, nombre: "Alcázar Tour (tickets incluidos)", horarios: "Consultar", dias: "Varios días", maxPersonas: 12, precio: 45 },
+  { id: 2, nombre: "Cathedral Tour (sin tickets)", horarios: "12:45 o 13:15", dias: "Lunes, Miércoles y Viernes (excepto festivos)", maxPersonas: 12, precio: 30 },
+  { id: 3, nombre: "Cathedral Tour (tickets incluidos)", horarios: "12:45 o 13:15", dias: "Lunes, Miércoles y Viernes (excepto festivos)", maxPersonas: 12, precio: 45 },
+  { id: 4, nombre: "Alcázar Tour (sin tickets)", horarios: "13:15 (verano: 12:45; primavera/otoño también 15:15)", dias: "Mar/Jue/Sáb + opciones estacionales Lun/Mie/Vie", maxPersonas: 12, precio: 30 },
+  { id: 5, nombre: "Alcázar Tour (tickets incluidos)", horarios: "13:15 (verano: 12:45; primavera/otoño también 15:15)", dias: "Mar/Jue/Sáb + opciones estacionales Lun/Mie/Vie", maxPersonas: 12, precio: 45 },
   { id: 6, nombre: "Cathedral, Alcázar and Santa Cruz Quarter", horarios: "Consultar", dias: "Consultar", maxPersonas: 12, precio: 55 },
   { id: 7, nombre: "City Intro Tour + 1 Monument", horarios: "Consultar", dias: "Consultar", maxPersonas: 12, precio: 40 },
   { id: 8, nombre: "City Intro, Cathedral and Alcázar", horarios: "Consultar", dias: "Consultar", maxPersonas: 12, precio: 50 },
@@ -16,7 +16,7 @@ const TOURS_KB = [
   { id: 11, nombre: "Tapas Tour Off the Beaten Path", horarios: "Consultar (flexible)", dias: "Consultar", maxPersonas: 12, precio: 35 },
   { id: 12, nombre: "Family Tour", horarios: "Flexible - Contactar", dias: "Cualquier día", maxPersonas: 12, precio: 40 },
   { id: 13, nombre: "Day Trip to Ronda", horarios: "8:00 am", dias: "Consultar", maxPersonas: 8, precio: 80 },
-  { id: 14, nombre: "Day Trip to Cádiz and Jerez", horarios: "Consultar", dias: "Consultar", maxPersonas: 8, precio: 85 },
+  { id: 14, nombre: "Day Trip to Cádiz and Jerez", horarios: "9:00 am", dias: "Consultar", maxPersonas: 8, precio: 85 },
   { id: 15, nombre: "Private Custom Tour", horarios: "Flexible", dias: "Cualquier día", maxPersonas: 12, precio: 0 },
 ];
 
@@ -115,11 +115,11 @@ export default new Autonomous.Tool({
           nombre: tour.nombre,
           horarios: tour.horarios,
           dias: tour.dias,
+          schedule: schedules,
           maxPersonas: tour.maxPersonas,
           precio: tour.precio,
         },
         guias,
-        schedule: schedules || [],
       };
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);

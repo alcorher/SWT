@@ -96,7 +96,7 @@ export default new Autonomous.Tool({
       }
 
       const plazasRestantes = tourKB.maxPersonas - plazasReservadas;
-      const hayTourEseDia = plazasReservadas > 0;
+      const hayTourEseDia = true; // Fixed: A tour can be scheduled even if there are 0 reservations.
 
       // 3) Obtiene guías disponibles vinculados al tour por tabla puente (desde Supabase)
       let guiasDisponibles = [];

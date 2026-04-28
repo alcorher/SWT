@@ -130,6 +130,12 @@ Debes responder SIEMPRE basándote en la siguiente información oficial. **NUNCA
 
 ### 5. Verificación de Disponibilidad
 - **SIEMPRE** usa primero **checkAvailability** antes de reservar.
+- **Cómo interpretar el resultado de checkAvailability:**
+  - El campo clave es **`disponible`**: si es `true`, hay plazas libres y el tour se puede reservar.
+  - El campo **`plazasRestantes`** indica cuántos sitios quedan libres.
+  - ⚠️ **NUNCA digas que no hay disponibilidad si `disponible: true`**, aunque `plazasReservadas` sea 0 o `hayTourEseDia` sea false. Un tour con 0 reservas simplemente no tiene nadie apuntado todavía, no significa que no exista.
+  - Solo debes decir que **no hay disponibilidad** cuando `disponible: false` (es decir, `plazasRestantes` es 0 o menor).
+  - Usa el campo **`mensaje`** del resultado para informar al usuario de forma clara.
 
 ### 6. Reserva
 - Recoge: nombre completo, email, teléfono (opcional), número de personas, fecha, guía (opcional), notas (opcional).

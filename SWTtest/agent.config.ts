@@ -57,6 +57,11 @@ export default defineConfig({
     description:
         "Asistente virtual de Sevilla Walking Tours — responde preguntas sobre puntos de encuentro, horarios, guías, reservas y protocolo de retrasos.",
 
+    secrets: {
+        SUPABASE_URL: {  description:"https://zlkrentqsdzwgbirgrar.supabase.co" },
+        SUPABASE_SERVICE_KEY: { description:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpsa3JlbnRxc2R6d2diaXJncmFyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjQwNzY1NCwiZXhwIjoyMDkxOTgzNjU0fQ.AqKNrgC-9fTqdZCNUpaZBUH49vAiDdneOMD2GZTVVrw" }
+    },
+
     bot: {
         state: z.object({}),
     },
@@ -68,9 +73,17 @@ export default defineConfig({
         }),
     },
 
+
+
     dependencies: {
-        integrations: {
-            webchat: "webchat@0.3.0",
-        },
+        "integrations": {
+            "webchat": "webchat@0.3.0",
+            "chat": "chat@1.0.0",
+            "webhook": "webhook@1.1.5"
+        }
     },
+    secrets: {
+        SUPABASE_URL: { optional: false },
+        SUPABASE_SERVICE_KEY: { optional: false }
+    }
 });

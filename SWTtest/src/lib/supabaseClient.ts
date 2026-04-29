@@ -7,9 +7,11 @@
  * Las credenciales se leen de variables de entorno (.env.local)
  * para no exponer secretos en el código fuente.
  */
+import { secrets } from "@botpress/runtime";
 
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY;
+
+const SUPABASE_URL = secrets.SUPABASE_URL || process.env.SUPABASE_URL;
+const SUPABASE_KEY = secrets.SUPABASE_SERVICE_KEY || process.env.SUPABASE_SERVICE_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
   throw new Error(

@@ -34,6 +34,8 @@ export default new Conversation({
         const nombreUsuario = user.state.userName || "Visitante";
         const emailUsuario = user.state.email || "";
 
+        
+
         await execute({
             instructions: `
 # Rol y Personalidad

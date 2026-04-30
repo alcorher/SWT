@@ -10,8 +10,7 @@ const sevillaWebsite = DataSource.Website.fromSitemap(
   { 
     id: 'seville-website', 
     maxPages: 200,           // límite razonable 
-    maxDepth: 5,            // profundidad del árbol 
-    fetch: 'integration:browser' // opcional, usar navegador 
+    maxDepth: 5,              
   } 
 ) 
 

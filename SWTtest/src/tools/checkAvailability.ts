@@ -1,5 +1,5 @@
 import { Autonomous, z } from "@botpress/runtime";
-import { supabaseFetch } from "../lib/supabaseClient";
+import { supabaseFetch } from "../lib/supabaseClient";  
 
 interface Reservation {
   id: number;
